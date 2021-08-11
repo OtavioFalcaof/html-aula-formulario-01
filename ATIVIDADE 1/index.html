@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Formulário HTML</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #FFF;
+            --gray-25: #A5ABE9;
+            --gray-50: #F7F8FA;
+            --gray-100: #E6E8EB;
+            --gray-200: #AFB2B1;
+            --gray-500: #808080;
+            --gray-800: #494D4B;
+
+            --green-500: #04D361;
+            --green-600: #055738;
+
+            --blue-200: #6899EE;
+            --blue-300: #043B4E;
+            --blue-400: #325395;
+            --blue-500: #121749;
+
+            --purple-300: #9F75FF;
+            --purple-400: #9164FA;
+            --purple-500: #8257E5;
+            --purple-600: #9716F3;
+            --purple-800: #6F48C9;
+            --purple-900: #66004E;
+            --purple-950: #451966;
+
+            --black-100: #000000;
+        }
+
+        body {
+
+            background: linear-gradient(180deg, var(--gray-50), var(--gray-25));
+            background-attachment: fixed;
+        }
+
+
+        .formulario {
+            width: 400px;
+            padding: 30px;
+            margin-left: 460px;
+            margin-top: 80px;
+            border: 1px solid var(--purple-950);
+            border-radius: 15px;
+            border-color: var(--purple-300);
+            background: linear-gradient(120deg, var(--blue-500), var(--purple-600));
+            color: var(--white);
+            font-weight: bold;
+            box-shadow: 1px 1px 1px 1px var(--green-500);
+            animation: neon-pisca 1.5s infinite;
+
+        }
+
+        .formulario p {
+            width: 100%;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .field {
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        .field label,
+        .field span {
+            padding-left: 10px;
+            font-size: 1.1em;
+            display: block;
+            width: 100%;
+        }
+
+
+        input[type=text],
+        input[type=email] {
+            width: 100%;
+            padding-left: px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        input#idade {
+            width: 25%;
+            height: 25px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        input#data {
+            width: 40%;
+            height: 32px;
+            border: none;
+            border-radius: 15px;
+        }
+
+
+        input[type=submit] {
+
+            outline: none;
+            display: block;
+            background: linear-gradient(120deg, var(--purple-800), var(--blue-500));
+            color: var(--white);
+            font-weight: bold;
+            height: 35px;
+            outline: 0;
+            cursor: pointer;
+            width: 100px;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 15px;
+            transition: .5s ease-in-out;
+
+        }
+
+        input[type=submit]:hover {
+            background-position: right;
+            transform: scale(1.1);
+            transition: 200ms ease-in;
+        }
+
+        @keyframes neon-pisca {
+            from {
+                box-shadow: 1px 3px 6px 1px var(--blue-400);
+
+            }
+
+            to {
+                box-shadow: 2px 4px 6px 3px var(--purple-600);
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <form class="formulario" method="post">
+        <p> Preencha o formulário</p>
+
+        <div class="field">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+        </div>
+
+
+        <div class="field">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="1" required>
+        </div>
+
+
+        <div class="field">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone">
+        </div>
+
+        <div class="field">
+            <label for="dataNascimento">Data de nascimento:</label>
+            <input type="date" id="data" name="data" required>
+        </div>
+
+
+        <input type="submit" name="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            font-weight: 800;
+            margin-left: 390px;
+        }
+
+        form {
+            width: 40%;
+        }
+
+        #nome {
+            width: 310px;
+            height: 20px;
+            margin-bottom: 4px;
+        }
+
+        #estado {
+            position: relative;
+            top: 10px;
+            left: 5px;
+            width: 90px;
+            height: 29px;
+        }
+
+
+        .genero {
+            position: relative;
+            left: 350px;
+            top: -130px;
+            line-height: 25px;
+            padding: 0 2px;
+        }
+
+        textarea {
+            position: relative;
+            top: 30px;
+            left: 30px;
+            width: 100px;
+            height: 35px;
+        }
+
+        label,
+        p {
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+
+        input {
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+
+        #estado {
+
+            position: relative;
+            top: 30px;
+            left: 30px;
+        }
+
+        #sub {
+            position: relative;
+            left: 410px;
+            top: -15px;
+            width: 90px;
+            height: 30px;
+            margin-top: 10px;
+            font-weight: 600;
+
+            border-color: black;
+        }
+
+        .container {
+            display: block;
+            height: 14rem;
+            text-align: justify;
+
+        }
+
+        .campoArea {
+            margin-top: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <form action="" method="">
+        <fieldset>
+
+            <legend>Formulário</legend>
+            <div class="container">
+                <label for="Ncompleto">Nome Completo:</label>
+                <input type="text" name="nome" id="nome">
+                <br><br>
+                <label for="Dnascimento">Data de nascimento:</label>
+                <input type="date" name="data" id="data">
+                <br><br>
+                <p>Selecione o estado em que mora:</p>
+                <select name="estado" id="estado">
+                    <option value="">Estado</option>
+                    <option value="PE">PE</option>
+                    <option value="PB">PB</option>
+                    <option value="CE">CE</option>
+                    <option value="SC">SC</option>
+                </select>
+                <br><br>
+                <div class="campoArea">
+                    <label for="campo"> 5 + 4 é ?</label>
+                    <textarea name="camp" id="campo" cols="12" rows="1"></textarea>
+                    <br>
+                </div>
+                <div class="genero">
+                    <p> Gênero :</p>
+                    <input type="radio" id="Feminino" value="Feminino">
+                    <label for="feminino">Feminino</label>
+                    <br>
+                    <input type="radio" id="masculino" value="Masculino">
+                    <label for="masculino">Masculino</label>
+                    <br>
+                    <input type="radio" id="outros" value="Outros">
+                    <label for="outros">Outros</label>
+                </div>
+            </div>
+            <input type="submit" id="sub" value="Salvar">
+        </fieldset>
+    </form>
+</body>
+
+</html>
